@@ -1,0 +1,365 @@
+html {
+	background: #9FCBE8;
+	width: 100%;
+	font-size: 62.5%;
+	font-size: calc(1em * .625);
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+} 
+
+body {
+	display: flex;
+	flex-direction: column;
+	width: 95%;
+	height: 95%;
+	margin: 26px;
+	padding: 0;
+	border: 1px solid white;
+	background: #fff;
+	line-height: 1.4;
+	background-color: #eee;
+	color: #000;
+	font-family: opensans-light, helvetica, arial, sans-serif;
+	font-size: 1.6em;
+}
+
+body, input, button, textarea, select {
+	font-family: "Palatino Linotype", Freeserif, serif;
+	letter-spacing: .05em;
+}
+
+form {
+	min-height: 100%;
+}
+
+.hero {
+	background: #FF7F50; /*  coral orange */
+	display: flex;
+	flex-direction: row;
+	min-height: 90%;
+	flex-grow: 1;
+}
+
+#footer {
+	z-index: 1;
+	flex-grow: 0;
+}
+
+#main, #sidebar {
+	padding-bottom: 2em;
+}
+
+#main {
+	border-left: 1px solid white;
+	width: 60%;
+}
+
+#sidebar {
+	width: 15%;
+}
+
+/* aside correspond aux news , colonne de droite */
+#aside {
+	width: 25%;
+}
+
+#menu_haut>h3, #menu_bas>h3 {
+	min-height: 55px;
+	vertical-align: middle;
+}
+
+.flexbox {
+	min-width: 100%;
+	max-width: 100%;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	overflow: hidden;
+}
+
+.flexbox .col {
+	flex: 1;
+	margin:30px 0px 30px 16px;
+}
+
+.flexbox .col:nth-child(1) {
+	z-index: 2;
+	order: 0;
+}
+
+.flexbox .col:nth-child(2) {
+	z-index: 2;
+	order: 1;
+}
+
+.flexbox .col:nth-child(3) {
+	z-index: 2;
+	order: 2;
+}
+
+canvas#coin-bas-gauche {
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+
+canvas#coin-bas-droit {
+	flex-grow: 0;
+	flex-shrink: 0;
+	margin-left: auto;
+}
+
+canvas#coin-haut-gauche {
+	flex-grow: 0;
+	flex-shrink: 0;
+	order: 0;
+	margin-right: auto;
+	/* flex-basis :10%; */
+}
+
+canvas#coin-haut-droit {
+	flex-grow: 0;
+	flex-shrink: 0;
+	order: 2;
+	margin-left: auto;
+}
+
+#header, #footer {
+	background: white;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+#header {
+	z-index: 1;
+	background: white;
+	flex-grow: 0;
+}
+
+#content-area {
+	position: relative;
+	top: 60px;
+	padding: 0 0;
+	background: #333;
+}
+
+.hero__background {
+	/* This stretches the canvas across the entire hero unit */
+	position: absolute;
+	top: 10;
+	left: 10;
+	min-width: 95%;
+	max-width: 95%;
+	min-height: 100%;
+	max-height: 100%;
+	/* This positions the canvas under the text */
+	z-index: 1;
+}
+
+h1 {
+	font-size: 2em;
+	margin: .67em 0;
+}
+
+h1:first-child, nav h1, p:first-child {
+	margin-top: 0
+}
+
+a {
+	background-color: transparent;
+	 
+}
+
+img {
+	border: 0;
+	vertical-align: middle;
+	max-width: 100%
+}
+
+body, p {
+	line-height: 1.5;
+}
+
+body>script {
+	display: none !important;
+}
+
+@font-face {
+	font-family: opensans-light;
+	src: local('opensans-light'), url( ../font/opensans-light.woff2)
+		format('woff2'), url( ../font/opensans-light.woff) format('woff');
+	font-weight: 300;
+	font-style: normal
+}
+
+@font-face {
+	font-family: calendas;
+	src: local('calendas'), url(../font/calendas.woff2) format('woff2'),
+		url(../font/calendas.woff) format('woff');
+	font-weight: 400;
+	font-style: normal
+} 
+
+/*!
+* www.KNACSS.com V4.3.2 (8 juillet 2015) @author: Raphael Goetter, Alsacreations
+* Licence WTFPL http://www.wtfpl.net/
+*/
+/*! normalize.css v3.0.2 | MIT License | github.com/necolas/normalize.css */
+
+
+nav {
+	font-size: 2.6rem;
+	font-family: calendas, georgia, serif;
+	text-rendering: optimizeLegibility;
+	-webkit-font-feature-settings: "swsh", "liga", "dlig";
+	font-feature-settings: "swsh", "liga", "dlig";
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 2em;
+	margin-top: 0.5em;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	order: 1;
+	z-index: 2;
+}
+
+nav a {
+	display: block;
+	padding: .4em 1em;
+	color: #335271;
+	text-decoration: none
+}
+
+nav h1 span {
+	position: absolute;
+	clip: rect(0, 0, 0, 0)
+}
+
+nav h1 a::before {
+	display: inline-block;
+	width: 9rem;
+	height: 9rem;
+	border: 1px solid rgba(255, 255, 255, .4);
+	border-radius: 50%;
+	background: #335271;
+	background: -webkit-radial-gradient(left top ellipse, #213549 0%, #335271 80%);
+	background: radial-gradient(ellipse at left top, #213549 0%, #335271 80%);
+	box-shadow: 0 0 0 .8rem #335271, 1.1rem 1.1rem 5px rgba(0, 0, 0, .3);
+	color: #fff;
+	content: attr(data-abbr);
+	text-align: center;
+	font-size: 4rem;
+	line-height: 8.5rem;
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .25s transform cubic-bezier(.28, -.47, .89, 1.97);
+	transition: .25s transform cubic-bezier(.28, -.47, .89, 1.97)
+}
+
+footer {
+	margin-top: 4rem;
+	padding: 1rem;
+	background: #aaa;
+	text-align: center
+}
+
+footer, footer h2 {
+	color: #fff
+}
+
+footer li {
+	display: inline-block;
+	margin-bottom: 1em
+}
+
+footer li+li {
+	margin-left: 2rem
+}
+
+h1, h2, h3, .description {
+	font-family: calendas,Georgia,"Lucida Bright",serif;
+	 
+	font-weight: 400;
+}
+
+nav h1 a:hover::before {
+	-webkit-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1)
+}
+
+nav>a {
+	text-align: center;
+	background-image: -webkit-linear-gradient(left, currentColor, currentColor);
+	background-image: linear-gradient(to right, currentColor, currentColor);
+	background-repeat: no-repeat;
+	background-size: 100% 1px;
+	background-position: center bottom;
+ 
+}
+
+
+nav>a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color:  #008B8B;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+/* nécessaire pour l'animation du menu */
+nav>a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+nav > a {
+  position: relative;
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover, a:focus, a:active {
+	color: #008B8B;
+}
+
+	
+nav a:nth-of-type(-n+2) {
+	-webkit-box-ordinal-group: 0;
+	-webkit-order: -1;
+	-ms-flex-order: -1;
+	order: -1
+}
+
+nav>a, nav h1 {
+	width: auto
+}
+ 

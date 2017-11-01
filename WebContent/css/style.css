@@ -1,0 +1,651 @@
+html, body {
+	margin: 0;
+	height: 100%;
+}
+
+/* body {
+	 background: url(../img/sun.png) fixed no-repeat top right,
+		url(../img/neige.jpg) fixed; 
+	
+}
+*/
+
+div {
+	text-align: left;
+	padding: 10px;
+}
+
+p {
+	color: #e95325;
+	font-size: 14px; /* Paragraphes de 14 pixels */
+	font-family: "Source Sans Pro", sans-serif;
+}
+
+h1 {
+	font-size: 40px; /* Titres de 40 pixels */
+}
+
+
+div.row {
+    display: table;
+    width: 100%;
+}
+
+div.cell {
+    display: table-cell;
+    background: #eee;
+   /*   width: 20%;  */
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid black; 
+}
+
+div#bandeau {
+ 	width: 100%;
+	height: 15%; 
+	background: #00CCFF;
+}
+ 
+
+	
+div#menu {
+
+	background-color: #FF6699;
+}
+
+div#menu_haut {
+	height: 47%;
+	background-color: #efedde;
+}
+
+div#menu_bas {
+	height: 47%;
+	background-color: #CC99CC;
+}
+
+div#contenant_news {
+
+}
+
+div#news {
+	float: right;
+	width: 25%;
+	height: 25%;
+	background-color: #FF3300;
+	border-left-color: white;
+	border-left-width: 16px;
+	border-left-style: solid;
+	border-bottom-color: white;
+	border-bottom-width: 11px;
+	border-bottom-style: solid;
+}
+
+div#pied_page {
+	clear: both;
+	width: 100%;
+	height: 15%;
+	background-color: #33FF99;
+}
+
+div .part-title {
+	color: rgb(233, 83, 37);
+	text-transform: uppercase;
+	font-size: 29px;
+	font-weight: 300;
+	margin-bottom: 30px;
+	border-bottom-color: rgb(190, 190, 190);
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+div#analyse-logs a.oc-btn {
+	margin: 10px auto 0px;
+	width: 45%;
+	display: block;
+}
+
+/** d�but oc-btn */
+a.oc-btn {
+	padding-top: 2px;
+	text-decoration: none;
+	display: inline-block;
+}
+
+span.oc-btn {
+	padding-top: 2px;
+	text-decoration: none;
+	display: inline-block;
+}
+
+a.oc-btn:hover {
+	text-decoration: none;
+}
+
+span.oc-btn:hover {
+	text-decoration: none;
+}
+
+.oc-btn {
+	margin: 0px;
+	padding: 7px;
+	border: currentColor;
+	text-align: center;
+	line-height: normal;
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 14px;
+	vertical-align: middle;
+	cursor: pointer;
+	text-overflow: ellipsis;
+}
+
+.oc-btn {
+	color: rgb(255, 255, 255);
+}
+
+.oc-btn:visited {
+	color: rgb(255, 255, 255);
+}
+
+a.oc-btn {
+	margin: 0px;
+	padding: 7px;
+	border: currentColor;
+	text-align: center;
+	line-height: normal;
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 14px;
+	vertical-align: middle;
+	cursor: pointer;
+	text-overflow: ellipsis;
+}
+
+button.oc-btn {
+	margin: 0px;
+	padding: 7px;
+	border: currentColor;
+	text-align: center;
+	line-height: normal;
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 14px;
+	vertical-align: middle;
+	cursor: pointer;
+	text-overflow: ellipsis;
+}
+
+div.oc-btn {
+	margin: 0px;
+	padding: 7px;
+	border: currentColor;
+	text-align: center;
+	line-height: normal;
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 14px;
+	vertical-align: middle;
+	cursor: pointer;
+	text-overflow: ellipsis;
+}
+
+input[type=submit].oc-btn {
+	margin: 0px;
+	padding: 7px;
+	border: currentColor;
+	text-align: center;
+	line-height: normal;
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 14px;
+	vertical-align: middle;
+	cursor: pointer;
+	text-overflow: ellipsis;
+}
+
+a:not (.link-btn ).oc-btn {
+	outline: 0px;
+}
+
+button:not (.link-btn ).oc-btn {
+	outline: 0px;
+}
+
+div:not (.link-btn ).oc-btn {
+	outline: 0px;
+}
+
+input[type=submit]:not (.link-btn ).oc-btn {
+	outline: 0px;
+}
+
+a.oc-btn {
+	color: rgb(255, 255, 255);
+}
+
+a.oc-btn:visited {
+	color: rgb(255, 255, 255);
+}
+
+button.oc-btn {
+	color: rgb(255, 255, 255);
+}
+
+button.oc-btn:visited {
+	color: rgb(255, 255, 255);
+}
+
+div.oc-btn {
+	color: rgb(255, 255, 255);
+}
+
+div.oc-btn:visited {
+	color: rgb(255, 255, 255);
+}
+
+input[type=submit].oc-btn {
+	color: rgb(255, 255, 255);
+}
+
+input[type=submit].oc-btn:visited {
+	color: rgb(255, 255, 255);
+}
+
+a.oc-btn i {
+	top: 1px;
+	line-height: 0;
+	vertical-align: 0px;
+	position: relative;
+}
+
+button.oc-btn i {
+	top: 1px;
+	line-height: 0;
+	vertical-align: 0px;
+	position: relative;
+}
+
+div.oc-btn i {
+	top: 1px;
+	line-height: 0;
+	vertical-align: 0px;
+	position: relative;
+}
+
+input[type=submit].oc-btn i {
+	top: 1px;
+	line-height: 0;
+	vertical-align: 0px;
+	position: relative;
+}
+
+a.oc-btn i.icon-large {
+	top: 3px;
+	vertical-align: 0px;
+}
+
+button.oc-btn i.icon-large {
+	top: 3px;
+	vertical-align: 0px;
+}
+
+div.oc-btn i.icon-large {
+	top: 3px;
+	vertical-align: 0px;
+}
+
+input[type=submit].oc-btn i.icon-large {
+	top: 3px;
+	vertical-align: 0px;
+}
+
+a.oc-btn i::before {
+	vertical-align: 0px;
+}
+
+button.oc-btn i::before {
+	vertical-align: 0px;
+}
+/*div.oc-btn i::before {
+	vertical-align: 0px;
+}
+input[type=submit].oc-btn i::before {
+	vertical-align: 0px;
+}*/
+
+/** fin oc-btn */
+
+/** d�but red-btn */
+a.red-btn {
+	border-width: 1px 1px 3px;
+	border-style: solid;
+	border-color: transparent transparent rgb(126, 16, 35);
+	position: relative;
+	background-color: rgb(194, 25, 54);
+}
+
+button.red-btn {
+	border-width: 1px 1px 3px;
+	border-style: solid;
+	border-color: transparent transparent rgb(126, 16, 35);
+	position: relative;
+	background-color: rgb(194, 25, 54);
+}
+
+div.red-btn {
+	border-width: 1px 1px 3px;
+	border-style: solid;
+	border-color: transparent transparent rgb(126, 16, 35);
+	position: relative;
+	background-color: rgb(194, 25, 54);
+}
+
+input[type=submit].red-btn {
+	border-width: 1px 1px 3px;
+	border-style: solid;
+	border-color: transparent transparent rgb(126, 16, 35);
+	position: relative;
+	background-color: rgb(194, 25, 54);
+}
+
+a:not (:disabled ):not (.disabled ).red-btn:hover {
+	background-color: rgb(160, 21, 45);
+	-webkit-transition: background-color .2s;
+	transition: background-color .2s;
+	-moz-transition: background-color .2s;
+	-o-transition: background-color .2s;
+}
+
+button:not (:disabled ):not (.disabled ).red-btn:hover {
+	background-color: rgb(160, 21, 45);
+	-webkit-transition: background-color .2s;
+	transition: background-color .2s;
+	-moz-transition: background-color .2s;
+	-o-transition: background-color .2s;
+}
+
+div:not (:disabled ):not (.disabled ).red-btn:hover {
+	background-color: rgb(160, 21, 45);
+	-webkit-transition: background-color .2s;
+	transition: background-color .2s;
+	-moz-transition: background-color .2s;
+	-o-transition: background-color .2s;
+}
+
+input[type=submit]:not (.disabled ):not (:disabled ).red-btn:hover {
+	background-color: rgb(160, 21, 45);
+	-webkit-transition: background-color .2s;
+	transition: background-color .2s;
+	-moz-transition: background-color .2s;
+	-o-transition: background-color .2s;
+}
+
+a:not (:disabled ):not (.disabled ).red-btn:active {
+	box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+button:not (:disabled ):not (.disabled ).red-btn:active {
+	box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+div:not (:disabled ):not (.disabled ).red-btn:active {
+	box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+input[type=submit]:not (.disabled ):not (:disabled ).red-btn:active {
+	box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+a.disabled.red-btn {
+	border-color: rgb(232, 79, 105);
+	cursor: not-allowed;
+	pointer-events: none;
+}
+
+a:disabled.red-btn {
+	border-color: rgb(232, 79, 105);
+	cursor: not-allowed;
+	pointer-events: none;
+}
+
+button.disabled.red-btn {
+	border-color: rgb(232, 79, 105);
+	cursor: not-allowed;
+	pointer-events: none;
+}
+
+button:disabled.red-btn {
+	border-color: rgb(232, 79, 105);
+	cursor: not-allowed;
+	pointer-events: none;
+}
+
+div.disabled.red-btn {
+	border-color: rgb(232, 79, 105);
+	cursor: not-allowed;
+	pointer-events: none;
+}
+
+div:disabled.red-btn {
+	border-color: rgb(232, 79, 105);
+	cursor: not-allowed;
+	pointer-events: none;
+}
+
+input[type=submit].disabled.red-btn {
+	border-color: rgb(232, 79, 105);
+	cursor: not-allowed;
+	pointer-events: none;
+}
+
+input[type=submit]:disabled.red-btn {
+	border-color: rgb(232, 79, 105);
+	cursor: not-allowed;
+	pointer-events: none;
+}
+
+a.disabled.red-btn::after {
+	background: rgb(255, 255, 255);
+	filter: alpha(opacity = 50);
+	opacity: 0.5;
+}
+
+a:disabled.red-btn::after {
+	background: rgb(255, 255, 255);
+	filter: alpha(opacity = 50);
+	opacity: 0.5;
+}
+
+button.disabled.red-btn::after {
+	background: rgb(255, 255, 255);
+	filter: alpha(opacity = 50);
+	opacity: 0.5;
+}
+
+button:disabled.red-btn::after {
+	background: rgb(255, 255, 255);
+	filter: alpha(opacity = 50);
+	opacity: 0.5;
+}
+
+div.disabled.red-btn::after {
+	background: rgb(255, 255, 255);
+	filter: alpha(opacity = 50);
+	opacity: 0.5;
+}
+
+div:disabled.red-btn::after {
+	background: rgb(255, 255, 255);
+	filter: alpha(opacity = 50);
+	opacity: 0.5;
+}
+
+input[type=submit].disabled.red-btn::after {
+	background: rgb(255, 255, 255);
+	filter: alpha(opacity = 50);
+	opacity: 0.5;
+}
+
+input[type=submit]:disabled.red-btn::after {
+	background: rgb(255, 255, 255);
+	filter: alpha(opacity = 50);
+	opacity: 0.5;
+}
+
+a.disabled.red-btn {
+	border-bottom-color: rgb(232, 79, 105);
+	cursor: default;
+}
+
+a:disabled.red-btn {
+	border-bottom-color: rgb(232, 79, 105);
+	cursor: default;
+}
+
+button.disabled.red-btn {
+	border-bottom-color: rgb(232, 79, 105);
+	cursor: default;
+}
+
+button:disabled.red-btn {
+	border-bottom-color: rgb(232, 79, 105);
+	cursor: default;
+}
+
+div.disabled.red-btn {
+	border-bottom-color: rgb(232, 79, 105);
+	cursor: default;
+}
+
+div:disabled.red-btn {
+	border-bottom-color: rgb(232, 79, 105);
+	cursor: default;
+}
+
+input[type=submit].disabled.red-btn {
+	border-bottom-color: rgb(232, 79, 105);
+	cursor: default;
+}
+
+input[type=submit]:disabled.red-btn {
+	border-bottom-color: rgb(232, 79, 105);
+	cursor: default;
+}
+
+a.disabled.red-btn::after {
+	left: -1px;
+	top: -1px;
+	right: -1px;
+	bottom: -1px;
+	position: absolute;
+	content: " ";
+}
+
+a:disabled.red-btn::after {
+	left: -1px;
+	top: -1px;
+	right: -1px;
+	bottom: -1px;
+	position: absolute;
+	content: " ";
+}
+
+button.disabled.red-btn::after {
+	left: -1px;
+	top: -1px;
+	right: -1px;
+	bottom: -1px;
+	position: absolute;
+	content: " ";
+}
+
+button:disabled.red-btn::after {
+	left: -1px;
+	top: -1px;
+	right: -1px;
+	bottom: -1px;
+	position: absolute;
+	content: " ";
+}
+
+div.disabled.red-btn::after {
+	left: -1px;
+	top: -1px;
+	right: -1px;
+	bottom: -1px;
+	position: absolute;
+	content: " ";
+}
+
+div:disabled.red-btn::after {
+	left: -1px;
+	top: -1px;
+	right: -1px;
+	bottom: -1px;
+	position: absolute;
+	content: " ";
+}
+
+input[type=submit].disabled.red-btn::after {
+	left: -1px;
+	top: -1px;
+	right: -1px;
+	bottom: -1px;
+	position: absolute;
+	content: " ";
+}
+
+input[type=submit]:disabled.red-btn::after {
+	left: -1px;
+	top: -1px;
+	right: -1px;
+	bottom: -1px;
+	position: absolute;
+	content: " ";
+}
+
+a.red-btn:active {
+	border-bottom-color: currentColor;
+	border-bottom-width: medium;
+	border-bottom-style: none;
+}
+
+button.red-btn:active {
+	border-bottom-color: currentColor;
+	border-bottom-width: medium;
+	border-bottom-style: none;
+}
+
+div.red-btn:active {
+	border-bottom-color: currentColor;
+	border-bottom-width: medium;
+	border-bottom-style: none;
+}
+
+
+
+input[type=submit].red-btn:active {
+	border-bottom-color: currentColor;
+	border-bottom-width: medium;
+	border-bottom-style: none;
+}
+/** fin red-btn */
+
+div.ligne select, div.ligne input, div.ligne input+a  {
+  display: inline-block;
+  padding: 3px;
+  margin : 10px;
+}
+
+a.disabled {
+   pointer-events: none;
+   cursor: default;
+}
+
+p.legend em {
+	font-family:Verdana,sans-serif;
+	font-size:12px;
+}
+
+ .toto .tyty .tata {
+background-color: blue;
+}
+
+.toto .titi .tata {
+background-color: pink;
+}

@@ -1,0 +1,136 @@
+html {
+	background: #9FCBE8;
+	/*background: white; */
+	width: 100%;
+}
+
+body {
+	background-color: black;
+	width: 95%;
+	min-width: 600px;
+	max-width: 1900px;
+	height: 95%;
+	min-height: 600px;
+	 max-height: 1300px; 
+	margin: 26px;
+	border: 1px solid white;
+	/*	border-top: 0; */
+	z-index: -1;
+}
+
+body, input, button, textarea, select {
+	font-family: "Palatino Linotype", Freeserif, serif;
+	letter-spacing: .05em;
+}
+
+h1 {
+	font-size: 1.5em;
+}
+
+p {
+	font-size: 0.7em;
+}
+
+form {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	
+ 
+    
+/* 	min-height: 100%;
+	max-height: 100%; */
+
+}
+
+ #main, #sidebar, #footer {
+	padding-bottom: 2em;
+}
+
+#header, #footer {
+	min-height: 3%;
+	max-height: 3%;
+	background: white;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+#main {
+	border-left: 1px solid white;
+	width: 60%;
+}
+
+#sidebar {
+	width: 15%;
+}
+
+/* aside correspond aux news , colonne de droite */
+#aside {
+	width: 25%;
+}
+
+#menu_haut>h3, #menu_bas>h3 {
+	min-height: 55px;
+	vertical-align: middle;
+}
+
+.flexbox {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	overflow: hidden;
+}
+
+.flexbox .col {
+	flex: 1;
+}
+
+.flexbox .col:nth-child(1) {
+	z-index: 2;
+	order: 1;
+}
+
+.flexbox .col:nth-child(2) {
+	z-index: 2;
+	order: 0;
+}
+
+.flexbox .col:nth-child(3) {
+	z-index: 2;
+	order: 2;
+}
+
+.hero {
+	position: relative;
+	width: 100%;
+	padding: 2em 0;
+	background: black;
+}
+
+.hero__background {
+	/* This stretches the canvas across the entire hero unit */
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-width: 100%;
+	max-width: 100%;
+	min-height: 100%;
+	max-height: 100%;
+	/* This positions the canvas under the text */
+	z-index: 1;
+}
+
+canvas.coin {
+	min-width: 39%;
+	max-width: 39%;
+	min-height: 1%;
+	max-height: 1%;
+}
+
+.flex-item-bottom {
+	border: solid 2px #4675AA;
+	/* 	order: 1;
+	flex: 0 1 auto;
+	align-self: flex-end; */
+}

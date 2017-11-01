@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<script src="js/jquery.1.4.3.js"></script>
+<script type="text/javascript" src="js/jquery.mask.0.4.6.js"></script>
+<script>
+	jQuery(document).ready(function() {
+		 
+		$(".ip_address").mask('0ZZ.0ZZ.0ZZ.SZZ', {
+			translation : {
+				'Z' : {
+					pattern : /[0-9]/,
+					optional : true
+				},
+
+				'S' : {
+					pattern : /[0-9+*]/,
+					optional : true
+				}
+			}
+		});
+	});
+</script>
+<title>Premiers tests du CSS</title>
+</head>
+
+<body>
+
+   <div id="bandeau">Ceci est le bandeau</div>
+   <div id="menu">
+      <div id="menu_haut">Menu haut</div>
+      <div id="menu_bas">Menu bas</div>
+   </div>
+
+
+
+   <div id="contenant_news">
+
+
+      <div id="news">Bloc News d</div>
+
+      <div id="analyse-logs">
+         <h2 class="part-title">Analyse des logs après une partie</h2>
+         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed egestas faucibus nunc. Morbi quis neque
+            laoreet ante varius rutrum. Nam arcu ipsum, blandit placerat, pharetra ut, pulvinar in, nulla. Vivamus
+            condimentum, elit eu faucibus sollicitudin, nisi metus fermentum mi, sed egestas purus nunc sit amet est.
+            Cras imperdiet, arcu sed placerat viverra, arcu justo malesuada augue, a tristique nunc neque vitae ligula.
+            Mauris bibendum. Praesent nibh. Sed in lacus semper dui lobortis dignissim. Nunc iaculis, tortor sed commodo
+            tincidunt, neque ligula porttitor orci, venenatis bibendum ante mi id massa. Pellentesque ipsum urna,
+            posuere non, pellentesque non, tempus at, ipsum. Aliquam lacinia nisl sit amet ipsum. Nam volutpat vulputate
+            lacus. Integer orci dui, lacinia non, blandit sit amet, vulputate vel, sem. Vestibulum mi neque, pharetra
+            ut, venenatis et, ultricies vitae, urnaLorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed egestas
+            faucibus nunc. Morbi quis neque laoreet ante varius rutrum. Nam arcu ipsum, blandit placerat, pharetra ut,
+            pulvinar in, nulla. Vivamus condimentum, elit eu faucibus sollicitudin, nisi metus fermentum mi, sed egestas
+            purus nunc sit amet est. Cras imperdiet, arcu sed placerat viverra, arcu justo malesuada augue, a tristique
+            nunc neque vitae ligula. Mauris bibendum. Praesent nibh. Sed in lacus semper dui lobortis dignissim. Nunc
+            iaculis, tortor sed commodo tincidunt, neque ligula porttitor orci, venenatis bibendum ante mi id massa.
+            Pellentesque ipsum urna, posuere non, pellentesque non, tempus at, ipsum. Aliquam lacinia nisl sit amet
+            ipsum. Nam volutpat vulputate lacus. Integer orci dui, lacinia non, blandit sit amet, vulputate vel, sem.
+            Vestibulum mi neque, pharetra ut, venenatis et, ultricies vitae, urn.</p>
+         <a href="/forum/categorie/html-css" class="oc-btn red-btn"> Lancer analyse ! </a> 
+         <label>IP Address</label> 
+         <div  class="space_between_inline_inputs" >
+<!--             <input type="text"  class="ip_address"  name="ipchoice" id="ip_address" size="15" maxlength="15" />
+            <input type="text"  class="ip_address"  name="ip_extension" id="ip_address_extension" size="3" maxlength="3" /> -->
+
+            
+             <div class="ip_choice_extension">
+               <input type="text" name="ipchoice" id="ip_address" size="15" maxlength="15" /> 
+               <input type="text"
+                  name="ip_extension" id="ip_address_extension" size="3" maxlength="3" />
+                  <input type="text" class="ip_address" />
+               <a href="#" onclick="javascript:addIP();">OK</a>
+            </div>
+
+         </div>
+       
+      </div>
+   </div>
+
+   <div id="pied_page">Ceci est le pied de page</div>
+
+
+</body>
+</html>

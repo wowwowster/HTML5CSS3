@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<style>
+span.zone-tooltip {
+	position: relative;
+	cursor: pointer;
+}
+
+span.zone-tooltip span {
+	display: none;
+}
+
+span.zone-tooltip:hover span, span.zone-tooltip:focus span {
+	display: block;
+	position: absolute;
+	top: -220px;
+	left: 20px;
+	color: #000;
+	margin-left: 3em;
+	min-width: 170px;
+	max-width: 170px;
+	border: 1px solid #8a7148;
+	padding: 8px 6px 8px 10px;
+	background-color: white;
+    z-index:999;
+}
+
+a.help-button {
+	min-width: 16px;
+	min-height: 16px;
+	position: relative;
+	top: -4px;
+	font-size: 0;
+	display: inline-block;
+	cursor: pointer;
+	cursor: hand;
+	background: url("img/iconHelp.png") center no-repeat;
+	_background-image: url("img/iconHelp.gif");
+	vertical-align: middle;
+}
+
+.blockInside {
+   background: #fff;
+   zoom: 1;
+   position: relative;
+   z-index: 10;
+   overflow: hidden;
+   overflow-x: visible;
+   _height: 1%;
+}
+.blockSquared .blockInside {
+   margin: 2px 5px 8px 5px;
+   border: solid 1px #381d07;
+}
+.blockTabs .blockInside {
+   background: #fff;
+}
+.themeClassic .blockInside {
+   border-color: #0f3867;
+}
+.blockRounded .blockInside {
+   margin: 1px 3px 5px 3px;
+   background: #fff;
+}
+.theme4 .blockInside {
+   background-color: #f9a711;
+}
+.blockSquared .block .blockInside {
+   border-width: 0;
+}
+.block, .body, .head, .foot {
+   overflow: hidden;
+   overflow-x: visible;
+   zoom: 1;
+}
+.block {
+   position: relative;
+}
+#foSimulatorGuarantee .blockRounded {
+   color: #000;
+}
+.block4, .block5 {
+   clear: both;
+}
+.head, .body, .foot {
+   padding: 10px;
+}
+.blockSquared .head, .blockSquared .body, .blockSquared .foot {
+   padding: 10px;
+}
+.blockSquared {
+   margin: 10px 0;
+}
+.blockTabs {
+   margin-top: 0px;
+}
+.bloc2 {
+   background-color: #F3F1E7;
+   float: right;
+   padding-bottom: 50px;
+   width: 710px;
+}
+#foSimulatorGuarantee {
+   background: none;
+   margin: 0;
+   padding: 0;
+   color: #381d07;
+   font-family: Verdana, sans-serif;
+   font-size: 10px;
+}
+#sectionResultat, #fieldsetResult1, #fieldsetResult2, #fieldsetResult3 {
+   display: none;
+}
+.blocs {
+   float: left;
+   width: 940px;
+   height: auto;
+}
+.container {
+   width: 940px;
+   height: 100%;
+   margin-left: auto;
+   margin-right: auto;
+}
+.page {
+   width: 100%;
+   height: 100%;
+}
+body {
+   margin: 0;
+   padding: 0;
+   font-family: Verdana,sans-serif;
+   font-size: 10px;
+}
+.blockRounded .head, .blockRounded .body, .blockRounded .foot {
+   padding: 4px;
+}
+h3 {
+   font-size: 1.2em;
+}
+.head h3, .foot ul {
+   margin: 0;
+}
+h3 .label, h3 .amount {
+   display: block;
+   text-align: center;
+}
+h3 .labelLeft {
+   display: block;
+   text-align: left;
+   margin-left: 50px;
+   _margin-left: 40px;
+}
+h3 .label {
+   float: left;
+   width: 70%;
+   padding: 5px 0;
+   position: relative;
+}
+h3 .amount {
+   float: right;
+   margin: 0 auto;
+   width: 106px;
+   background: #fff;
+   border: solid 1px #ccc;
+   padding: 4px 0 4px 4px;
+   border-radius: 3px;
+}
+h3 .label .subLabel, h3 .label .equalLabel, h3 .label .mainLabel {
+   display: block;
+}
+h3 .label .mainLabel {
+   text-transform: uppercase;
+}
+sup {
+   font-size: 0.8em;
+   line-height: 0.8em;
+}
+
+[data-tooltip] { /* on cible les attributs data-tooltip */
+position: relative;
+cursor: help;
+border-bottom: 1px dotted gray;
+}
+[data-tooltip]:hover:after {
+content: attr(data-tooltip); /* on récupère et affiche la valeur de data-tooltip */
+position: absolute;
+top: 1.5em; left: 0;
+white-space: nowrap; /* on empêche les retours à la ligne */
+padding: 5px 10px;
+background: #cde;
+}
+
+</style>
+<body>
+<p>
+         principal d'un livre au format DocBook. Les métadonnées sont contenues dans un élément metadata. Celui-ci
+         contient plusieurs éléments du Dublin Core dont les noms commencent par le préfixe dc. L'élément include de
+         XInclude fait partie d'un autre espace de noms marqué par le préfixe xi. Les espaces de noms ont été introduits
+         en XML afin de pouvoir mélanger plusieurs vocabulaires au sein d'un même document. De nombreux dialectes XML
+         ont été définis pour des utilisations diverses et il est préférable de les réutiliser au maximum. Il est, en
+         effet, fastidieux de redéfinir plusieurs fois les mêmes vocabulaires. Le recyclage des dialectes fait
+         d'ailleurs partie des objectifs de XML. Le mélange de plusieurs vocabulaires au sein d'un même document ne doit
+         pas empêcher la validation de celui-ci. Il devient indispensable d'identifier la provenance de chaque élément
+         et de chaque attribut afin de le valider correctement. Les espaces de noms jouent justement ce rôle. Chaque
+         élément ou attribut appartient à un espace de noms qui détermine le vocabulaire dont il est issu. Cette
+         appartenance est marquée par la présence dans le nom d'un préfixe associé à l'espace de noms. Le mélange de
+         plusieurs vocabulaires est illustré par l'exemple suivant. Afin d'insérer des métadonnées dans des documents,
+         il est nécessaire de disposer d'éléments pour présenter celles-ci. Il existe déjà un standard, appelé Dublin
+         Core, pour organiser ces métadonnées. Il comprend une quinzaine d'éléments dont title, creator, subject et date
+         qui permettent de décrire les caractéristiques principales d'un document. Il est préférable d'utiliser le
+         vocabulaire Dublin Core, qui est un standard international, plutôt que d'introduire un nouveau vocabulaire. Le
+
+         principal d'un livre au format DocBook. Les métadonnées sont contenues dans un élément metadata. Celui-ci
+         contient plusieurs éléments du Dublin Core dont les noms commencent par le préfixe dc. L'élément include de
+         XInclude fait partie d'un autre espace de noms marqué par le préfixe xi. Les espaces de noms ont été introduits
+         en XML afin de pouvoir mélanger plusieurs vocabulaires au sein d'un même document. De nombreux dialectes XML
+         ont été définis pour des utilisations diverses et il est préférable de les réutiliser au maximum. Il est, en
+         effet, fastidieux de redéfinir plusieurs fois les mêmes vocabulaires. Le recyclage des dialectes fait
+         d'ailleurs partie des objectifs de XML. Le mélange de plusieurs vocabulaires au sein d'un même document ne doit
+         pas empêcher la validation de celui-ci. Il devient indispensable d'identifier la provenance de chaque élément
+         et de chaque attribut afin de le valider correctement. Les espaces de noms jouent justement ce rôle. Chaque
+         élément ou attribut appartient à un espace de noms qui détermine le vocabulaire dont il est issu. Cette
+         appartenance est marquée par la présence dans le nom d'un préfixe associé à l'espace de noms. Le mélange de
+         plusieurs vocabulaires est illustré par l'exemple suivant. Afin d'insérer des métadonnées dans des documents,
+         il est nécessaire de disposer d'éléments pour présenter celles-ci. Il existe déjà un standard, appelé Dublin
+         Core, pour organiser ces métadonnées. Il comprend une quinzaine d'éléments dont title, creator, subject et date
+         qui permettent de décrire les caractéristiques principales d'un document. Il est préférable d'utiliser le
+         vocabulaire Dublin Core, qui est un standard international, plutôt que d'introduire un nouveau vocabulaire. Le
+         
+         principal d'un livre au format DocBook. Les métadonnées sont contenues dans un élément metadata. Celui-ci
+         contient plusieurs éléments du Dublin Core dont les noms commencent par le préfixe dc. L'élément include de
+         XInclude fait partie d'un autre espace de noms marqué par le préfixe xi. Les espaces de noms ont été introduits
+         en XML afin de pouvoir mélanger plusieurs vocabulaires au sein d'un même document. De nombreux dialectes XML
+         ont été définis pour des utilisations diverses et il est préférable de les réutiliser au maximum. Il est, en
+         effet, fastidieux de redéfinir plusieurs fois les mêmes vocabulaires. Le recyclage des dialectes fait
+         d'ailleurs partie des objectifs de XML. Le mélange de plusieurs vocabulaires au sein d'un même document ne doit
+         pas empêcher la validation de celui-ci. Il devient indispensable d'identifier la provenance de chaque élément
+         et de chaque attribut afin de le valider correctement. Les espaces de noms jouent justement ce rôle. Chaque
+         élément ou attribut appartient à un espace de noms qui détermine le vocabulaire dont il est issu. Cette
+         appartenance est marquée par la présence dans le nom d'un préfixe associé à l'espace de noms. Le mélange de
+         plusieurs vocabulaires est illustré par l'exemple suivant. Afin d'insérer des métadonnées dans des documents,
+         il est nécessaire de disposer d'éléments pour présenter celles-ci. Il existe déjà un standard, appelé Dublin
+         Core, pour organiser ces métadonnées. Il comprend une quinzaine d'éléments dont title, creator, subject et date
+         qui permettent de décrire les caractéristiques principales d'un document. Il est préférable d'utiliser le
+         vocabulaire Dublin Core, qui est un standard international, plutôt que d'introduire un nouveau vocabulaire. Le
+         
+         principal d'un livre au format DocBook. Les métadonnées sont contenues dans un élément metadata. Celui-ci
+         contient plusieurs éléments du Dublin Core dont les noms commencent par le préfixe dc. L'élément include de
+         XInclude fait partie d'un autre espace de noms marqué par le préfixe xi. Les espaces de noms ont été introduits
+         en XML afin de pouvoir mélanger plusieurs vocabulaires au sein d'un même document. De nombreux dialectes XML
+         ont été définis pour des utilisations diverses et il est préférable de les réutiliser au maximum. Il est, en
+         effet, fastidieux de redéfinir plusieurs fois les mêmes vocabulaires. Le recyclage des dialectes fait
+         d'ailleurs partie des objectifs de XML. Le mélange de plusieurs vocabulaires au sein d'un même document ne doit
+         pas empêcher la validation de celui-ci. Il devient indispensable d'identifier la provenance de chaque élément
+         et de chaque attribut afin de le valider correctement. Les espaces de noms jouent justement ce rôle. Chaque
+         élément ou attribut appartient à un espace de noms qui détermine le vocabulaire dont il est issu. Cette
+         appartenance est marquée par la présence dans le nom d'un préfixe associé à l'espace de noms. Le mélange de
+         plusieurs vocabulaires est illustré par l'exemple suivant. Afin d'insérer des métadonnées dans des documents,
+         il est nécessaire de disposer d'éléments pour présenter celles-ci. Il existe déjà un standard, appelé Dublin
+         Core, pour organiser ces métadonnées. Il comprend une quinzaine d'éléments dont title, creator, subject et date
+         qui permettent de décrire les caractéristiques principales d'un document. Il est préférable d'utiliser le
+         vocabulaire Dublin Core, qui est un standard international, plutôt que d'introduire un nouveau vocabulaire. Le
+         
+</p>
+   <div class="page">
+      <div class="container">
+         <div class="blocs">
+            <div class="bloc2" id="foSimulatorGuarantee">
+               <div id="content">
+                  <form id="formulaireResultat" action="" method="post">
+                     <div class="section" id="sectionResultat" style="display: block;">
+                        <div class="theme themeClassic themeClassique" id="themeResultat">
+                           <div class="block blockSquared blockTabs">
+                              <div class="blockInside">
+                                 <div class="body" id="tabClassic">
+                                    <div class="theme theme4  block5">
+                                       <div class="block blockRounded">
+                                          <div class="blockInside">
+                                             <div class="head">
+                                                <h3>
+
+                                                   <span class="label labelLeft"><span class="mainLabel">Coût
+                                                         final indicatif<sup>*</sup> de la garantie Crédit Logement
+                                                   </span></span> <span class="amount"><span id="classic_coutFinal">224.20</span>&nbsp;€</span>
+                                                </h3>
+                                             </div>
+                                             <!-- end .head -->
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <p>
+      <span>
+
+         principal d'un livre au format DocBook. Les métadonnées sont contenues dans un élément metadata. Celui-ci
+         contient plusieurs éléments du Dublin Core dont les noms commencent par le préfixe dc. L'élément include de
+         XInclude fait partie d'un autre espace de noms marqué par le préfixe xi. Les espaces de noms ont été introduits
+         en XML afin de pouvoir mélanger plusieurs vocabulaires au sein d'un même document. De nombreux dialectes XML
+         ont été définis pour des utilisations diverses et il est préférable de les réutiliser au maximum. Il est, en
+         effet, fastidieux de redéfinir plusieurs fois les mêmes vocabulaires. Le recyclage des dialectes fait
+         d'ailleurs partie des objectifs de XML. Le mélange de plusieurs vocabulaires au sein d'un même document ne doit
+         pas empêcher la validation de celui-ci. Il devient indispensable d'identifier la provenance de chaque élément
+         et de chaque attribut afin de le valider correctement. Les espaces de noms jouent justement ce rôle. Chaque
+         élément ou attribut appartient à un espace de noms qui détermine le vocabulaire dont il est issu. Cette
+         appartenance est marquée par la présence dans le nom d'un préfixe associé à l'espace de noms. Le mélange de
+         plusieurs vocabulaires est illustré par l'exemple suivant. Afin d'insérer des métadonnées dans des documents,
+         il est nécessaire de disposer d'éléments pour présenter celles-ci. Il existe déjà un standard, appelé Dublin
+         Core, pour organiser ces métadonnées. Il comprend une quinzaine d'éléments dont title, creator, subject et date
+         qui permettent de décrire les caractéristiques principales d'un document. Il est préférable d'utiliser le
+         vocabulaire Dublin Core, qui est un standard international, plutôt que d'introduire un nouveau vocabulaire. Le
+         document suivant est le document principal d'un livre au format DocBook. Les métadonnées sont contenues dans un
+         élément metadata. Celui-ci contient plusieurs éléments du Dublin Core dont les noms commencent par le préfixe
+         dc. L'élément include de XInclude fait partie d'un autre espace de noms marqué par le préfixe xi. </span> 
+         <span data-tooltip="L'Autorit&eacute; de contr&ocirc;le prudentiel et de
+            r&eacute;solution - ACPR - est l'organe de supervision fran&ccedil;ais de la banque et de l'assurance.
+            Autorit&eacute; administrative ind&eacute;pendante, elle veille à la pr&eacute;servation de la
+            stabilit&eacute; du syst&egrave;me financier et &agrave; la protection des clients, assur&eacute;s,
+            adh&eacute;rents et b&eacute;n&eacute;ficiaires des personnes soumises à son contr&ocirc;le.">survolez-moi !</span>
+         
+         <span
+         class="zone-tooltip"> I am a <span>L'Autorit&eacute; de contr&ocirc;le prudentiel et de
+            r&eacute;solution - ACPR - est l'organe de supervision fran&ccedil;ais de la banque et de l'assurance.
+            Autorit&eacute; administrative ind&eacute;pendante, elle veille à la pr&eacute;servation de la
+            stabilit&eacute; du syst&egrave;me financier et &agrave; la protection des clients, assur&eacute;s,
+            adh&eacute;rents et b&eacute;n&eacute;ficiaires des personnes soumises à son contr&ocirc;le. </span> <a
+         class="help-button"></a>
+      </span> <span id="suite">developer.Les espaces de noms ont été introduits en XML afin de pouvoir mélanger
+         plusieurs vocabulaires au sein d'un même document. De nombreux dialectes XML ont été définis pour des
+         utilisations diverses et il est préférable de les réutiliser au maximum. Il est, en effet, fastidieux de
+         redéfinir plusieurs fois les mêmes vocabulaires. Le recyclage des dialectes fait d'ailleurs partie des
+         objectifs de XML. Le mélange de plusieurs vocabulaires au sein d'un même document ne doit pas empêcher la
+         validation de celui-ci. Il devient indispensable d'identifier la provenance de chaque élément et de chaque
+         attribut afin de le valider correctement. Les espaces de noms jouent justement ce rôle. Chaque élément ou
+         attribut appartient à un espace de noms qui détermine le vocabulaire dont il est issu. Cette appartenance est
+         marquée par la présence dans le nom d'un préfixe associé à l'espace de noms. Le mélange de plusieurs
+         vocabulaires est illustré par l'exemple suivant. Afin d'insérer des métadonnées dans des documents, il est
+         nécessaire de disposer d'éléments pour présenter celles-ci. Il existe déjà un standard, appelé Dublin Core,
+         pour organiser ces métadonnées. Il comprend une quinzaine d'éléments dont title, creator, subject et date qui
+         permettent de décrire les caractéristiques principales d'un document. Il est préférable d'utiliser le
+         vocabulaire Dublin Core, qui est un standard international, plutôt que d'introduire un nouveau vocabulaire. Le
+         document suivant est le document principal d'un livre au format DocBook. Les métadonnées sont contenues dans un
+         élément metadata. Celui-ci contient plusieurs éléments du Dublin Core dont les noms commencent par le préfixe
+         dc. L'élément include de XInclude fait partie d'un autre espace de noms marqué par le préfixe xi. Les espaces
+         de noms ont été introduits en XML afin de pouvoir mélanger plusieurs vocabulaires au sein d'un même document.
+         De nombreux dialectes XML ont été définis pour des utilisations diverses et il est préférable de les réutiliser
+         au maximum. Il est, en effet, fastidieux de redéfinir plusieurs fois les mêmes vocabulaires. Le recyclage des
+         dialectes fait d'ailleurs partie des objectifs de XML. Le mélange de plusieurs vocabulaires au sein d'un même
+         document ne doit pas empêcher la validation de celui-ci. Il devient indispensable d'identifier la provenance de
+         chaque élément et de chaque attribut afin de le valider correctement. Les espaces de noms jouent justement ce
+         rôle. Chaque élément ou attribut appartient à un espace de noms qui détermine le vocabulaire dont il est issu.
+         Cette appartenance est marquée par la présence dans le nom d'un préfixe associé à l'espace de noms. Le mélange
+         de plusieurs vocabulaires est illustré par l'exemple suivant. Afin d'insérer des métadonnées dans des
+         documents, il est nécessaire de disposer d'éléments pour présenter celles-ci. Il existe déjà un standard,
+         appelé Dublin Core, pour organiser ces métadonnées. Il comprend une quinzaine d'éléments dont title, creator,
+         subject et date qui permettent de décrire les caractéristiques principales d'un document. Il est préférable
+         d'utiliser le vocabulaire Dublin Core, qui est un standard international, plutôt que d'introduire un nouveau
+         vocabulaire. Le document suivant est le document principal d'un livre au format DocBook. Les métadonnées sont
+         contenues dans un élément metadata. Celui-ci contient plusieurs éléments du Dublin Core dont les noms
+         commencent par le préfixe dc. L'élément include de XInclude fait partie d'un autre espace de noms marqué par le
+         préfixe xi. Les espaces de noms ont été introduits en XML afin de pouvoir mélanger plusieurs vocabulaires au
+         sein d'un même document. De nombreux dialectes XML ont été définis pour des utilisations diverses et il est
+         préférable de les réutiliser au maximum. Il est, en effet, fastidieux de redéfinir plusieurs fois les mêmes
+         vocabulaires. Le recyclage des dialectes fait d'ailleurs partie des objectifs de XML. Le mélange de plusieurs
+         vocabulaires au sein d'un même document ne doit pas empêcher la validation de celui-ci. Il devient
+         indispensable d'identifier la provenance de chaque élément et de chaque attribut afin de le valider
+         correctement. Les espaces de noms jouent justement ce rôle. Chaque élément ou attribut appartient à un espace
+         de noms qui détermine le vocabulaire dont il est issu. Cette appartenance est marquée par la présence dans le
+         nom d'un préfixe associé à l'espace de noms. Le mélange de plusieurs vocabulaires est illustré par l'exemple
+         suivant. Afin d'insérer des métadonnées dans des documents, il est nécessaire de disposer d'éléments pour
+         présenter celles-ci. Il existe déjà un standard, appelé Dublin Core, pour organiser ces métadonnées. Il
+         comprend une quinzaine d'éléments dont title, creator, subject et date qui permettent de décrire les
+         caractéristiques principales d'un document. Il est préférable d'utiliser le vocabulaire Dublin Core, qui est un
+         standard international, plutôt que d'introduire un nouveau vocabulaire. Le document suivant est le document
+         principal d'un livre au format DocBook. Les métadonnées sont contenues dans un élément metadata. Celui-ci
+         contient plusieurs éléments du Dublin Core dont les noms commencent par le préfixe dc. L'élément include de
+         XInclude fait partie d'un autre espace de noms marqué par le préfixe xi. Les espaces de noms ont été introduits
+         en XML afin de pouvoir mélanger plusieurs vocabulaires au sein d'un même document. De nombreux dialectes XML
+         ont été définis pour des utilisations diverses et il est préférable de les réutiliser au maximum. Il est, en
+         effet, fastidieux de redéfinir plusieurs fois les mêmes vocabulaires. Le recyclage des dialectes fait
+         d'ailleurs partie des objectifs de XML. Le mélange de plusieurs vocabulaires au sein d'un même document ne doit
+         pas empêcher la validation de celui-ci. Il devient indispensable d'identifier la provenance de chaque élément
+         et de chaque attribut afin de le valider correctement. Les espaces de noms jouent justement ce rôle. Chaque
+         élément ou attribut appartient à un espace de noms qui détermine le vocabulaire dont il est issu. Cette
+         appartenance est marquée par la présence dans le nom d'un préfixe associé à l'espace de noms. Le mélange de
+         plusieurs vocabulaires est illustré par l'exemple suivant. Afin d'insérer des métadonnées dans des documents,
+         il est nécessaire de disposer d'éléments pour présenter celles-ci. Il existe déjà un standard, appelé Dublin
+         Core, pour organiser ces métadonnées. Il comprend une quinzaine d'éléments dont title, creator, subject et date
+         qui permettent de décrire les caractéristiques principales d'un document. Il est préférable d'utiliser le
+         vocabulaire Dublin Core, qui est un standard international, plutôt que d'introduire un nouveau vocabulaire. Le
+         document suivant est le document principal d'un livre au format DocBook. Les métadonnées sont contenues dans un
+         élément metadata. Celui-ci contient plusieurs éléments du Dublin Core dont les noms commencent par le préfixe
+         dc. L'élément include de XInclude fait partie d'un autre espace de noms marqué par le préfixe xi. Les espaces
+         de noms ont été introduits en XML afin de pouvoir mélanger plusieurs vocabulaires au sein d'un même document.
+         De nombreux dialectes XML ont été définis pour des utilisations diverses et il est préférable de les réutiliser
+         au maximum. Il est, en effet, fastidieux de redéfinir plusieurs fois les mêmes vocabulaires. Le recyclage des
+         dialectes fait d'ailleurs partie des objectifs de XML. Le mélange de plusieurs vocabulaires au sein d'un même
+         document ne doit pas empêcher la validation de celui-ci. Il devient indispensable d'identifier la provenance de
+         chaque élément et de chaque attribut afin de le valider correctement. Les espaces de noms jouent justement ce
+         rôle. Chaque élément ou attribut appartient à un espace de noms qui détermine le vocabulaire dont il est issu.
+         Cette appartenance est marquée par la présence dans le nom d'un préfixe associé à l'espace de noms. Le mélange
+         de plusieurs vocabulaires est illustré par l'exemple suivant. Afin d'insérer des métadonnées dans des
+         documents, il est nécessaire de disposer d'éléments pour présenter celles-ci. Il existe déjà un standard,
+         appelé Dublin Core, pour organiser ces métadonnées. Il comprend une quinzaine d'éléments dont title, creator,
+         subject et date qui permettent de décrire les caractéristiques principales d'un document. Il est préférable
+         d'utiliser le vocabulaire Dublin Core, qui est un standard international, plutôt que d'introduire un nouveau
+         vocabulaire. Le document suivant est le document principal d'un livre au format DocBook. Les métadonnées sont
+         contenues dans un élément metadata. Celui-ci contient plusieurs éléments du Dublin Core dont les noms
+         commencent par le préfixe dc. L'élément include de XInclude fait partie d'un autre espace de noms marqué par le
+         préfixe xi. </span>
+   </p>
+</body>
+</html>

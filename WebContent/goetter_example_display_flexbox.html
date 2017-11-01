@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<link rel="stylesheet" href="css/goetter_style_display_flexbox.css" type="text/css"  />
+<!-- <link rel="stylesheet" href="css/styles.min.css"  type="text/css" /> -->
+<script src="js/libraries/jquery-1.11.3.js"></script>
+
+<script type="text/javascript">
+	var hauteur_footer = window.innerHeight / 8;
+	var hauteur_header = window.innerHeight / 8;
+	var hauteur_content_area = (window.innerHeight*6) / 8;
+	 var largeur_content_area = window.innerWidth;  // 1920 px
+ 
+	
+	jQuery(document).ready(function() {
+		$("#footer").css('max-height', hauteur_footer);
+		$("#footer").css('min-height', hauteur_footer);
+		$("#header").css('max-height', hauteur_header);
+		$("#header").css('min-height', hauteur_header);
+		$("#content-area").css('max-height', hauteur_content_area);
+		$("#content-area").css('min-height', hauteur_content_area);
+/* 		$("#content-area").css('max-width', largeur_content_area);
+		$("#content-area").css('min-width', largeur_content_area); */
+	});
+</script>
+
+
+<script type="text/javascript" src="js/libraries/jquery.mask.js"></script>
+<script type="text/javascript" src="js/libraries/StackBlur.js"></script>
+<script type="text/javascript" src="js/goetter_example_display_flexbox.js"></script>
+
+<title>goetter_example_display_flexbox.html</title>
+</head>
+
+<body id="body">
+	<canvas id="heroCanvas" class="hero__background" width="200" height="200" data-canvas></canvas>
+
+	<form name="myform" method="POST">
+
+		<header id="header">
+			<!-- <div id="header">	 -->
+			<nav id="navigation">
+				<h1>
+					<a href="http://www.goetter.fr" data-abbr="CL"> <span>Carl Laurier</span>
+					</a>
+				</h1>
+				<a href="/apropos.html">à propos</a> 
+				<a href="http://blog.goetter.fr/">blog</a> 
+				<a href="http://lab.goetter.fr/">labo</a>
+				<a href="/contact.html">contact</a>
+			</nav>
+		</header>
+
+		<div class="wrapper">
+			<div id="content-area" >
+	
+				<div class="flexbox">
+					<div id="sidebar" class="col">
+						<h3>Ici le menu</h3>
+						<div id="wrapper_menu">
+							<div id="menu_haut">
+								<h3>Menu haut</h3>
+							</div>
+							<div id="menu_bas">
+								<h3>Menu bas</h3>
+							</div>
+						</div>
+						<h2>
+							<a href="#">Sidebar</a>
+						</h2>
+	
+						<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+							Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet
+							quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+					</div>
+	
+					<div id="main" class="col">
+						<h3>Ici le contenu</h3>
+						<h2>
+							<a href="#">Main</a>
+						</h2>
+						<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+					</div>
+					<div id="aside" class="col">
+						<h3>Ici les news</h3>
+						<h2>
+							<a href="#">Aside</a>
+						</h2>
+						<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer"></div>
+
+	</form>
+
+
+</body>
+<script type="text/javascript" src="js/canvas.js"></script>
+</html>

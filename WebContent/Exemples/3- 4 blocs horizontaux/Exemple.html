@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        html, body { margin:0; height: 100%; background:#fff;}
+        body {
+            font-size: 1.4em;
+            font-family: helvetica, arial, serif;}
+        .um { background: #333; color: white; padding: 50px 20px;
+            height: -webkit-calc(99% - 100px);  /* pour Chrome */
+            height: -moz-calc(99% - 100px);     /* pour Firefox */
+            height: calc(99% - 100px);
+            margin:0;background: red;
+        }
+        .kiwi {
+            height: 99%;
+            width: 99%;
+            outline: 1px solid #333;
+            background: #eee;
+            margin: 0; padding: 0;
+            display: -webkit-flex; /* OK chrome 21 */
+            display: flex;
+            flex-direction: column;
+        }
+        li {
+            width:-webkit-calc(100% - 20px);
+            width:-moz-calc(100% - 20px);
+            width:calc(100% - 20px);
+            height: calc(99%);
+            color: #fff; padding: 10px; list-style: none; background: tomato}
+        li:nth-child(2) {background: orange}
+        li:nth-child(3) {background: #800000}
+        li:nth-child(4) {background: #FF3399}
+        li:nth-child(5) {background: #3399FF}
+    </style>
+    <title>Flexible Box Model</title>
+</head>
+<body>
+    <div class="um">
+        <ul class="kiwi">
+            <li>Salade</li>
+            <li>Tomate</li>
+            <li>Oignons</li>
+            <li>Choucroute</li>
+            <li>Picon bière</li>
+        </ul>
+    </div>
+</body>
+</html>

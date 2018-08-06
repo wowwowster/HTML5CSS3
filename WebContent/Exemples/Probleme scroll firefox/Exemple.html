@@ -1,0 +1,206 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/bootstrap.css" type="text/css" />
+    <style type="text/css">
+        html, body {
+            margin: 0;
+            height: 100%;
+            background: #fff;
+        }
+
+        body {
+            font-size: 1.4em;
+            font-family: helvetica, arial, serif;
+        }
+    </style>
+    <title>Flexible Box Model</title>
+</head>
+<body>
+<!-- fenêtre modale relative à la sélection des pièces
+<div class="modal fade" id="selectionPieceModal" tabindex="-1" role="dialog" aria-labelledby="selectionPieceModalLabel">
+    <div class="modal-dialog" role="document" style="left:-14px">
+        <div class="modal-content" style="width:600px;">
+            <div class="modal-header">
+                <h5 class="modal-title" id="selectionPieceModalLabel">Sélection
+                    Le titre</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="padding-bottom:38px;">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" value.bind="suggestValue"
+                           placeholder.bind="currentSuggestionLabel" aria-label="Recipient's username"
+                           aria-describedby="basic-addon2" style="max-width:390px;">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button"
+                                click.trigger="loadSuggestions(suggestValue,20)">Recherche
+                        </button>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="col-sm" style=" min-height: 0;">
+                        <div class="list-group list-scrollable">
+                            <a href="#" repeat.for="suggestion of suggestions"
+                               class="list-group-item list-group-item-action" data-dismiss="modal"
+                               >Le Nom
+                            </a>
+                            <a href="#" repeat.for="suggestion of suggestions"
+                               class="list-group-item list-group-item-action" data-dismiss="modal"
+                               >Le Nom
+                            </a>
+                            <a href="#" repeat.for="suggestion of suggestions"
+                               class="list-group-item list-group-item-action" data-dismiss="modal"
+                               >Le Nom
+                            </a>
+                            <a href="#" repeat.for="suggestion of suggestions"
+                               class="list-group-item list-group-item-action" data-dismiss="modal"
+                               >Le Nom
+                            </a>
+                            <a href="#" repeat.for="suggestion of suggestions"
+                               class="list-group-item list-group-item-action" data-dismiss="modal"
+                               >Le Nom
+                            </a>
+                            <a href="#" repeat.for="suggestion of suggestions"
+                               class="list-group-item list-group-item-action" data-dismiss="modal"
+                               >Le Nom
+                            </a>
+                            <a href="#" repeat.for="suggestion of suggestions"
+                               class="list-group-item list-group-item-action" data-dismiss="modal"
+                               >Le Nom
+                            </a>
+                            <a href="#" repeat.for="suggestion of suggestions"
+                               class="list-group-item list-group-item-action" data-dismiss="modal"
+                               >Le Nom
+                            </a>
+                            <a href="#" repeat.for="suggestion of suggestions"
+                               class="list-group-item list-group-item-action" data-dismiss="modal"
+                               >Le Nom
+                            </a>
+                            <a href="#" repeat.for="suggestion of suggestions"
+                               class="list-group-item list-group-item-action" data-dismiss="modal"
+                               >Le Nom
+                            </a>
+                            <a href="#" repeat.for="suggestion of suggestions"
+                               class="list-group-item list-group-item-action" data-dismiss="modal"
+                               >Le Nom
+                            </a>
+                            <a href="#" repeat.for="suggestion of suggestions"
+                               class="list-group-item list-group-item-action" data-dismiss="modal"
+                               >Le Nom
+                            </a>
+                            <a href="#" repeat.for="suggestion of suggestions"
+                               class="list-group-item list-group-item-action" data-dismiss="modal"
+                               >Le Nom
+                            </a>
+                            <a href="#" repeat.for="suggestion of suggestions"
+                               class="list-group-item list-group-item-action" data-dismiss="modal"
+                               >Le Nom
+                            </a>
+                            <a href="#" repeat.for="suggestion of suggestions"
+                               class="list-group-item list-group-item-action" data-dismiss="modal"
+                               >Le Nom
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+-->
+<div  id="selectionPieceModal" tabindex="-1" role="dialog" aria-labelledby="selectionPieceModalLabel">
+    <div class="modal-dialog" role="document" style="left:-14px">
+        <div class="modal-content" style="width:600px;">
+            <div class="modal-header">
+                <h5 class="modal-title" id="selectionPieceModalLabel">Sélection
+                    Le titre</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="padding-bottom:38px;">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" value.bind="suggestValue"
+                           placeholder.bind="currentSuggestionLabel" aria-label="Recipient's username"
+                           aria-describedby="basic-addon2" style="max-width:390px;">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button"
+                                click.trigger="loadSuggestions(suggestValue,20)">Recherche
+                        </button>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="col-sm" style=" min-height: 0;">
+                        <div class="list-group list-scrollable">
+                            <a href="#" repeat.for="suggestion of suggestions"
+                               class="list-group-item list-group-item-action" data-dismiss="modal"
+                            >Le Nom
+                            </a>
+                            <a href="#" repeat.for="suggestion of suggestions"
+                               class="list-group-item list-group-item-action" data-dismiss="modal"
+                            >Le Nom
+                            </a>
+                            <a href="#" repeat.for="suggestion of suggestions"
+                               class="list-group-item list-group-item-action" data-dismiss="modal"
+                            >Le Nom
+                            </a>
+                            <a href="#" repeat.for="suggestion of suggestions"
+                               class="list-group-item list-group-item-action" data-dismiss="modal"
+                            >Le Nom
+                            </a>
+                            <a href="#" repeat.for="suggestion of suggestions"
+                               class="list-group-item list-group-item-action" data-dismiss="modal"
+                            >Le Nom
+                            </a>
+                            <a href="#" repeat.for="suggestion of suggestions"
+                               class="list-group-item list-group-item-action" data-dismiss="modal"
+                            >Le Nom
+                            </a>
+                            <a href="#" repeat.for="suggestion of suggestions"
+                               class="list-group-item list-group-item-action" data-dismiss="modal"
+                            >Le Nom
+                            </a>
+                            <a href="#" repeat.for="suggestion of suggestions"
+                               class="list-group-item list-group-item-action" data-dismiss="modal"
+                            >Le Nom
+                            </a>
+                            <a href="#" repeat.for="suggestion of suggestions"
+                               class="list-group-item list-group-item-action" data-dismiss="modal"
+                            >Le Nom
+                            </a>
+                            <a href="#" repeat.for="suggestion of suggestions"
+                               class="list-group-item list-group-item-action" data-dismiss="modal"
+                            >Le Nom
+                            </a>
+                            <a href="#" repeat.for="suggestion of suggestions"
+                               class="list-group-item list-group-item-action" data-dismiss="modal"
+                            >Le Nom
+                            </a>
+                            <a href="#" repeat.for="suggestion of suggestions"
+                               class="list-group-item list-group-item-action" data-dismiss="modal"
+                            >Le Nom
+                            </a>
+                            <a href="#" repeat.for="suggestion of suggestions"
+                               class="list-group-item list-group-item-action" data-dismiss="modal"
+                            >Le Nom
+                            </a>
+                            <a href="#" repeat.for="suggestion of suggestions"
+                               class="list-group-item list-group-item-action" data-dismiss="modal"
+                            >Le Nom
+                            </a>
+                            <a href="#" repeat.for="suggestion of suggestions"
+                               class="list-group-item list-group-item-action" data-dismiss="modal"
+                            >Le Nom
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

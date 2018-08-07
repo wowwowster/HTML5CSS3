@@ -14,12 +14,30 @@
             font-size: 1.4em;
             font-family: helvetica, arial, serif;
         }
-        .list-scrollable {
-            -webkit-flex: 1 1 auto;
-            -ms-flex: 1 1 auto;
-            flex: 1 1 auto;
-            overflow-y: auto;
-            max-height: 58%;
+        .container {
+            background: #3F51B5;
+
+            /* give the outermost container a predefined size */
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 600px;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section {
+            margin: 10px;
+            background: #2196F3;
+            flex-grow: 1;
+
+            display: flex;
+            flex-direction: column;
+
+            /* for Firefox */
+            min-height: 0;
         }
         .content {
             margin: 10px;
@@ -154,7 +172,7 @@
                     </div>
                 </div>
                 <div class="container">
-                    <div class="col-sm" >
+                    <div class="section col-sm" >
                         <div class="scrollable-content content list-group">
                             <a href="#" class="list-group-item list-group-item-action" data-dismiss="modal"
                             >Le Nom

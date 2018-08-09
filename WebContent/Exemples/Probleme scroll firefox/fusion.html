@@ -4,12 +4,28 @@
     <meta charset="UTF-8">
     <style type="text/css">
 
+        html {
+            height: 100%;
+        }
+
+        body {
+
+            height: 100%;
+            font-size:1.4em;
+            font-family: Arial;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
         .list-group {
             display: -ms-flexbox;
             display: flex;
             -ms-flex-direction: column;
             flex-direction: column;
             padding-left: 0;
+
+            margin: 10px;
+            background: white;
         }
 
         .list-group-item:first-child {
@@ -34,23 +50,12 @@
             text-align: inherit;
         }
 
+/* à tester  */
 
-        html {
-            height: 100%;
-        }
 
-        body {
-
-            height: 100%;
-            font-size:1.4em;
-            font-family: Arial;
-            font-weight: 400;
-            line-height: 1.5;
-        }
 
         .content {
-            margin: 10px;
-            background: white;
+
         }
 
 
@@ -239,7 +244,7 @@
                 </div>
                 <div class="container">
                     <div class="col-sm">
-                        <div class="scrollable-content content list-group">
+                        <div class="scrollable-content  list-group">
                             <a href="#" class="list-group-item list-group-item-action" data-dismiss="modal">Le Nom
                             </a>
                             <a href="#" class="list-group-item list-group-item-action" data-dismiss="modal">Le Nom

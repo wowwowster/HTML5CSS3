@@ -3,8 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <style type="text/css">
+
+        html {
+            height: 100%;
+        }
+
         body {
-            font-family: arial;
+            height: 100%;
+            font-size:1.4em;
+            font-family: Arial;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        .content {
+            margin: 10px;
+            background: white;
+        }
+
+        .form-control {
+            display: block;
+            width: 100%;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border-radius: 0.25rem;
+            border: 1px solid #ced4da;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
         }
 
         .container {
@@ -33,10 +67,6 @@
             min-height: 0;
         }
 
-        .content {
-            margin: 10px;
-            background: #BBDEFB;
-        }
 
         .list-group {
             display: -ms-flexbox;

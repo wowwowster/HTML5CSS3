@@ -5,8 +5,6 @@
     <style type="text/css">
 
 
-
-
         .container {
             display: flex;
             height: 100vh;
@@ -57,7 +55,7 @@
             font-size: 28px;
         }
 
-/* ajoutées */
+        /* ajoutées */
         html {
             height: 100%;
         }
@@ -65,12 +63,55 @@
         body {
 
             height: 100%;
-            font-size:1.4em;
+            font-size: 1.4em;
             font-family: Arial;
             font-weight: 400;
             line-height: 1.5;
         }
 
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+
+        .btn {
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: 0.25rem;
+        }
+
+        .form-control {
+            display: block;
+            width: 100%;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border-radius: 0.25rem;
+            border: 1px solid #ced4da;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+
+        .input-group {
+            /* position: relative; */
+            display: -ms-flexbox;
+            display: flex;
+            width: 100%;
+        }
+
+        .input-group > .form-control {
+            width: 80%;
+        }
+
+        .input-group > .input-group-append > .btn {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
 
         .list-group {
             margin: 10px;
@@ -94,7 +135,7 @@
             margin-bottom: -1px;
             background-color: #fff;
             border: 1px solid rgba(0, 0, 0, 0.125);
-            text-decoration:none;
+            text-decoration: none;
             cursor: pointer;
         }
 
@@ -104,16 +145,43 @@
             text-align: inherit;
         }
 
+        @media (min-width: 576px) {
+            .modal-dialog { /* = container   */
+
+                max-width: 600px;
+                margin: 1.75rem auto;
+                /* give the outermost container a predefined size */
+                width: 600px;
+
+                display: flex;
+                flex-direction: column;
+            }
+
+            .col-sm {
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+
+        }
+
     </style>
     <title>Second exemple </title>
 </head>
 <body>
 
-<div class="container">
+<div class="container modal-dialog">
     <div class="left"></div>
     <div class="right">
         <div class="chat-wrapper">
-            <div class="chat-header"></div>
+            <div class="chat-header">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder.bind="currentSuggestionLabel"
+                                                aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <div class="input-group-append"  >
+                        <button class="btn btn-outline-secondary" type="button">Recherche</button>
+                    </div>
+                </div>
+            </div>
             <div class="chat-body  list-group">
                 <a href="#" class="list-group-item list-group-item-action" data-dismiss="modal">Le Nom
                 </a>

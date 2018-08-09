@@ -17,6 +17,49 @@
             line-height: 1.5;
         }
 
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        .btn {
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: 0.25rem;
+        }
+
+        .form-control {
+            display: block;
+            width: 100%;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border-radius: 0.25rem;
+            border: 1px solid #ced4da;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+
+        .input-group {
+            /* position: relative; */
+            display: -ms-flexbox;
+            display: flex;
+            width: 100%;
+        }
+
+        .input-group > .form-control {
+            width: 80%;
+        }
+
+        .input-group > .input-group-append > .btn {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
         .list-group {
             display: -ms-flexbox;
             display: flex;
@@ -50,59 +93,22 @@
             text-align: inherit;
         }
 
-/* à tester  */
 
 
 
-        .content {
 
-        }
-
-
-
-        .form-control {
-            display: block;
-            width: 100%;
-            padding: 0.375rem 0.75rem;
-            font-size: 1rem;
-            line-height: 1.5;
-            color: #495057;
-            background-color: #fff;
-            background-clip: padding-box;
-            border-radius: 0.25rem;
-            border: 1px solid #ced4da;
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
-            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-        }
+        /* à tester  */
 
 
 
-        *, *::before, *::after {
-            box-sizing: border-box;
-        }
 
-        .btn {
-            padding: 0.375rem 0.75rem;
-            font-size: 1rem;
-            line-height: 1.5;
-            border-radius: 0.25rem;
-        }
 
-        .input-group {
-            /* position: relative; */
-            display: -ms-flexbox;
-            display: flex;
-            width: 100%;
-        }
-        .input-group > .form-control {
-            width: 80%;
-        }
 
-        .input-group > .input-group-append > .btn {
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
-        }
+
+
+
+
+
 
         @media (min-width: 576px) {
             .modal-dialog { /* = container   */
@@ -238,7 +244,7 @@
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder.bind="currentSuggestionLabel"
                            aria-label="Recipient's username" aria-describedby="basic-addon2">
-                    <div class="input-group-append"  >  <!--- ne sert à rien --->
+                    <div class="input-group-append"  >
                         <button class="btn btn-outline-secondary" type="button">Recherche</button>
                     </div>
                 </div>

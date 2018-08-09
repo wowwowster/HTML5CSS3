@@ -29,17 +29,30 @@
         .chat-header {
             flex: 1;
             background-color: blue;
+            padding: 1rem;
+            padding-bottom:38px;
         }
 
-        .chat-body {
+        .scrollable-content {
             flex: 6;
             background-color: lightgreen;
             overflow-y: auto;
             overflow-x: hidden;
             padding-right: 15px;
             padding-left: 15px;
+
+            background: white;
+            flex-grow: 1;
+
+            overflow: auto;
+
+            /* for Firefox */
+            min-height: 0;
         }
 
+        .scrollable-content a:hover {
+            background-color:#f8f9fa;
+        }
         .chat-footer {
             flex: 1;
             background-color: gray;
@@ -73,6 +86,29 @@
             font-size: 1rem;
             line-height: 1.5;
             border-radius: 0.25rem;
+            border: 1px solid transparent;
+        }
+
+        .btn-outline-secondary {
+            color: #6c757d;
+            background-color: transparent;
+            background-image: none;
+            border-color: #6c757d;
+
+        }
+
+        .close {
+            padding: 1rem;
+            margin: -1rem -1rem -1rem auto;
+            background-color: transparent;
+            border: 0;
+            -webkit-appearance: none;
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1;
+            color: #000;
+            text-shadow: 0 1px 0 #fff;
+            opacity: .5;
         }
 
         .form-control {
@@ -158,6 +194,31 @@
 
         }
 
+        .modal-content {
+            margin: 10px;
+            background: #2196F3;
+            flex-grow: 1;
+
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
+            pointer-events: auto;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            border-radius: 0.3rem;
+            min-width: 600px;
+            /* for Firefox */
+            min-height: 0;
+        }
+
+        .modal-title {
+            font-size: 1.25rem;
+            font-family: inherit;
+            font-weight: 500;
+            color: inherit;
+        }
+
+
+
     </style>
     <title>Second exemple </title>
 </head>
@@ -166,8 +227,16 @@
 <div class="modal-dialog">
     <div class="left"></div>
     <div class="right">
-        <div class="chat-wrapper">
+        <div class="chat-wrapper modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Sélection Le titre</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
             <div class="chat-header">
+
+
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder.bind="currentSuggestionLabel"
                                                 aria-label="Recipient's username" aria-describedby="basic-addon2">
@@ -177,7 +246,7 @@
                 </div>
             </div>
 
-                <div class="chat-body  list-group">
+                <div class="scrollable-content  list-group">
                     <a href="#" class="list-group-item list-group-item-action" data-dismiss="modal">Le Nom
                     </a>
                     <a href="#" class="list-group-item list-group-item-action" data-dismiss="modal">Le Nom

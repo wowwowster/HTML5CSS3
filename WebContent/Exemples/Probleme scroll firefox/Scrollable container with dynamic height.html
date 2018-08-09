@@ -37,6 +37,15 @@
             margin: 10px;
             background: #BBDEFB;
         }
+
+        .list-group {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            padding-left: 0;
+        }
+
         .list-group-item:first-child {
             border-top-left-radius: 0.25rem;
             border-top-right-radius: 0.25rem;
@@ -77,7 +86,7 @@
         <div class="content">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore natus quisquam, dignissimos assumenda ratione magnam impedit quod delectus, voluptatum odio neque cupiditate rem porro blanditiis maxime doloribus quibusdam. Quam, officiis?
         </div>
-        <div class="scrollable-content content">
+        <div class="scrollable-content content list-group">
             <a href="#" class="list-group-item list-group-item-action" data-dismiss="modal">Le Nom
             </a>
             <a href="#" class="list-group-item list-group-item-action" data-dismiss="modal">Le Nom

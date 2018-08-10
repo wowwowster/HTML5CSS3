@@ -3,25 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <style type="text/css">
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            font-size: 1.4em;
+            font-family: Arial;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+
+
         .right {
             flex: 5;
             position: relative;
         }
 
         .chat-wrapper {
-            display: flex;
             flex-flow: row wrap;
-            flex-direction: column;
-            background: red;
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-        }
-
-        .chat-header {
-
         }
 
         .scrollable-content {
@@ -44,30 +55,6 @@
         .scrollable-content a:hover {
             background-color:#f8f9fa;
         }
-
-
-        ul, li {
-            font-size: 28px;
-        }
-
-        /* ajoutées */
-        html {
-            height: 100%;
-        }
-
-        body {
-
-            height: 100%;
-            font-size: 1.4em;
-            font-family: Arial;
-            font-weight: 400;
-            line-height: 1.5;
-        }
-
-        *, *::before, *::after {
-            box-sizing: border-box;
-        }
-
 
         .btn {
             padding: 0.375rem 0.75rem;

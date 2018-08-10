@@ -21,9 +21,7 @@
         }
 
         .chat-header {
-            flex: 1;
-            padding: 1rem;
-            padding-bottom:38px;
+
         }
 
         .scrollable-content {
@@ -46,10 +44,7 @@
         .scrollable-content a:hover {
             background-color:#f8f9fa;
         }
-        .chat-footer {
-            flex: 1;
-            background-color: gray;
-        }
+
 
         ul, li {
             font-size: 28px;
@@ -126,6 +121,8 @@
             display: flex;
             width: 100%;
             margin-bottom: 1rem !important;
+            padding: 1rem;
+            padding-bottom:38px;
         }
 
         .input-group > .form-control {
@@ -239,17 +236,15 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="chat-header">
 
-
-                <div class="input-group mb-3">
+                <div class="input-group">
                     <input type="text" class="form-control" placeholder.bind="currentSuggestionLabel"
                                                 aria-label="Recipient's username" aria-describedby="basic-addon2">
                     <div class="input-group-append"  >
                         <button class="btn btn-outline-secondary" type="button">Recherche</button>
                     </div>
                 </div>
-            </div>
+
 
                 <div class="scrollable-content  list-group">
                     <a href="#" class="list-group-item list-group-item-action" data-dismiss="modal">Le Nom

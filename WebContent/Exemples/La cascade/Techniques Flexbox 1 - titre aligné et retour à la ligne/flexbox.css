@@ -1,0 +1,29 @@
+body {
+    padding: 100px;
+    font-size: 21px;
+}
+
+.title {
+    border-bottom: 1px solid #ccc;
+    max-width: 500px;
+    margin: 40px auto;
+}
+
+.title-note {
+    font-size: 60%;
+    color: #999;
+}
+
+.flex-title {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.flex-title > span {
+    white-space: nowrap;
+}
+
+.flex-title .title-main {
+    flex-grow: 1;
+}

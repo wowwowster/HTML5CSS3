@@ -46,12 +46,9 @@ h2, h3 {
     flex: 1;
 }
 
-.Grid--gutters {
-    margin: -1em 0 1em -1em;
-}
-
-.Grid--gutters>.Grid-cell {
+.Grid-cell {
     padding: 1em 0 0 1em;
+
 }
 
 .Grid--flexCells>.Grid-cell {

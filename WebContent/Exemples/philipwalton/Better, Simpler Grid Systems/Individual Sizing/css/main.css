@@ -80,16 +80,7 @@ h2, h3 {
     text-align: center!important;
 }
 
-.Site {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
+.height100 {
     height: 100%;
 }
 

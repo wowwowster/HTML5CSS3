@@ -3,29 +3,6 @@ body {
     font-size: 21px;
 }
 
-.title {
-    border-bottom: 1px solid #ccc;
-    max-width: 500px;
-    margin: 40px auto;
-}
 
-.title-note {
-    font-size: 60%;
-    color: #999;
-}
 
-.end-of-line {
-    display: flex;
-    align-items: flex-end;
-    flex-wrap: wrap;
-}
 
-.end-of-line > span {
-    white-space: nowrap;
-}
-
-.grow-1 {
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1
-}

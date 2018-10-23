@@ -14,16 +14,18 @@ body {
     color: #999;
 }
 
-.flex-title {
+.end-of-line {
     display: flex;
     align-items: flex-end;
     flex-wrap: wrap;
 }
 
-.flex-title > span {
+.end-of-line > span {
     white-space: nowrap;
 }
 
-.flex-title .title-main {
-    flex-grow: 1;
+.grow-1 {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1
 }

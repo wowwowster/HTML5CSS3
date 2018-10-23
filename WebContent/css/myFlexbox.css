@@ -1,0 +1,15 @@
+.container-end-horizontal-line{
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.container-end-horizontal-line > span {
+    white-space: nowrap;
+}
+
+.grow-1 {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1
+}

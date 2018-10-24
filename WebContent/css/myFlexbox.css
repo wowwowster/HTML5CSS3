@@ -4,7 +4,7 @@
     flex-wrap: wrap;
 }
 
-.container-end-horizontal-line > span {
+.container-end-horizontal-line > div, .container-end-horizontal-line > span {
     white-space: nowrap;
 }
 

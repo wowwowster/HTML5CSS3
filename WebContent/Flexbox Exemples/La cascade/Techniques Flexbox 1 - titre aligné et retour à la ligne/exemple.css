@@ -3,6 +3,13 @@ body {
     font-size: 21px;
 }
 
+.red-text{
+    color:red;
+}
+
+.maxwidth40{
+    max-width:40%;
+}
 
 
 

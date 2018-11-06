@@ -1,0 +1,17 @@
+* { box-sizing: border-box; }
+
+.gallery {
+    min-height: 168px;
+    width: 100%;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: auto; /* here */
+}
+
+.gallery img {
+    display: block;
+    padding: 0 10px;
+    flex-shrink: 0; /* and here! */
+}
